@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: nova-messenger
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    plan: free
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: OTP_SECRET
+        generateValue: true
+      - key: DEV_OTP
+        value: "true"
+      - key: SMS_PROVIDER
+        value: "console"
+      - key: DATABASE_PATH
+        value: "/tmp/nova.db"
