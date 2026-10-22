@@ -1,0 +1,12 @@
+{
+  "name": "NOVA Messenger",
+  "short_name": "NOVA",
+  "description": "پیام‌رسان مینیمال NOVA",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090910",
+  "theme_color": "#090910",
+  "icons": []
+}
